@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import withLoader from '../custom-hook/withLoader';
 
-function Card() {
+function CardList(data: any) {
   const [count, setCount] = useState(0);
-
+console.log(data)
   return (
     <>
       <div className="card">
@@ -14,4 +15,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default withLoader(CardList, '');
